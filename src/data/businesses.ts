@@ -7,6 +7,16 @@ import quentinhasMoana from "@/assets/businesses/quentinhas-moana.jpeg";
 import deliciasNatalRosi from "@/assets/businesses/delicias-natal-rosi.jpeg";
 import deliciasDaPri from "@/assets/businesses/delicias-da-pri.jpeg";
 import telmaLima from "@/assets/businesses/telma-lima.jpeg";
+import tatianeAguiar from "@/assets/businesses/tatiane-aguiar.jpeg";
+import studioMegaHair from "@/assets/businesses/studio-mega-hair.jpeg";
+import tiaRosane from "@/assets/businesses/tia-rosane.jpeg";
+import doceSom from "@/assets/businesses/doce-som.jpeg";
+import liliFestas from "@/assets/businesses/lili-festas.jpeg";
+import suzanaMinifesta from "@/assets/businesses/suzana-minifesta.jpeg";
+import draGabrielli from "@/assets/businesses/dra-gabrielli.jpeg";
+import greyHouse from "@/assets/businesses/grey-house.jpeg";
+import carbonelliDriver from "@/assets/businesses/carbonelli-driver.jpeg";
+import pabloEstetica from "@/assets/businesses/pablo-estetica.jpeg";
 
 export type Category = 
   | "Todos"
@@ -14,7 +24,11 @@ export type Category =
   | "Pizzaria"
   | "Açaí"
   | "Marmitas"
-  | "Saúde & Bem-estar";
+  | "Saúde & Bem-estar"
+  | "Beleza"
+  | "Educação"
+  | "Festas"
+  | "Serviços";
 
 export interface Business {
   id: string;
@@ -35,6 +49,10 @@ export const categories: Category[] = [
   "Açaí",
   "Marmitas",
   "Saúde & Bem-estar",
+  "Beleza",
+  "Educação",
+  "Festas",
+  "Serviços",
 ];
 
 export const businesses: Business[] = [
@@ -124,5 +142,101 @@ export const businesses: Business[] = [
     phone: "21 980756959",
     image: telmaLima,
     highlights: ["Terapia de Casal", "Terapia Familiar", "Atendimento Online", "Atendimento Presencial"],
+  },
+  {
+    id: "tatiane-aguiar",
+    name: "Tatiane Aguiar - Psicanalista",
+    category: "Saúde & Bem-estar",
+    description: "Pós-graduanda em ACP e Graduanda em Psicologia. Atendimento online para ansiedade, luto, depressão, estresse e traumas.",
+    phone: "(21) 98142-9304",
+    instagram: "@tatianetito.psicanalista",
+    image: tatianeAguiar,
+    highlights: ["Ansiedade", "Luto/Perdas", "Depressão", "Terapia Online", "Fobia Social"],
+  },
+  {
+    id: "studio-mega-hair",
+    name: "Studio Mega Hair - Adriana Bianco",
+    category: "Beleza",
+    description: "Escova progressiva sem formol. Cabelos lindos começam com um agendamento!",
+    phone: "(21) 99349-5969",
+    image: studioMegaHair,
+    highlights: ["Escova Progressiva", "Sem Formol", "Mega Hair"],
+  },
+  {
+    id: "tia-rosane",
+    name: "Explicadora Tia Rosane",
+    category: "Educação",
+    description: "Reforço escolar com atenção, paciência e resultados! Auxílio em tarefas e preparação para provas.",
+    phone: "21 99354-7271",
+    address: "Rua H lote 03, Quadra 35, Jardim Anhangá, Duque de Caxias, RJ",
+    image: tiaRosane,
+    highlights: ["Reforço Escolar", "Tarefas Escolares", "Preparação para Provas", "Atividades Extras"],
+  },
+  {
+    id: "doce-som",
+    name: "Escola de Música Doce Som",
+    category: "Educação",
+    description: "Transforme sonhos em melodias. Venha estudar música conosco! Um projeto da Igreja Batista no Barro Branco.",
+    phone: "(21) 99973-6695",
+    image: doceSom,
+    highlights: ["Teclado", "Violão", "Violino", "Violoncelo", "Canto"],
+  },
+  {
+    id: "lili-festas",
+    name: "Lili Festas - Pegue e Monte",
+    category: "Festas",
+    description: "A sua festa começa aqui! Aluguel de itens para festas.",
+    phone: "(21) 98712-7887",
+    instagram: "@lilifestaspegueemonte",
+    image: liliFestas,
+    highlights: ["Pegue e Monte", "Decoração de Festas", "Aluguel"],
+  },
+  {
+    id: "suzana-minifesta",
+    name: "Suzana Minifesta",
+    category: "Festas",
+    description: "Kit de festa completo! Painel redondo, painel romano, arco de bolas, boleira, jarro e bandejas.",
+    phone: "(21) 97922-0868",
+    image: suzanaMinifesta,
+    highlights: ["Kit 1 R$50", "Kit 2 R$100", "Arco de Bolas", "Painel Redondo"],
+  },
+  {
+    id: "dra-gabrielli",
+    name: "Dra. Gabrielli Souza - Dentista",
+    category: "Saúde & Bem-estar",
+    description: "Cirurgiã-Dentista CRO-RJ 057024. Clareamento dental, prótese, profilaxia e muito mais.",
+    phone: "(21) 98435-2777",
+    instagram: "@dragabriellis",
+    image: draGabrielli,
+    highlights: ["Clareamento Dental", "Prótese", "Profilaxia", "Extração", "Tratamento Restaurador"],
+  },
+  {
+    id: "grey-house",
+    name: "Espaço Grey House",
+    category: "Festas",
+    description: "Espaço para eventos e festas. Reserve já o seu evento!",
+    phone: "(21) 98533-5192",
+    instagram: "@EspacoGreyHouse",
+    image: greyHouse,
+    highlights: ["Espaço para Festas", "Eventos", "Reservas"],
+  },
+  {
+    id: "carbonelli-driver",
+    name: "Carbonelli Driver - Motorista Particular",
+    category: "Serviços",
+    description: "Motorista particular para suas viagens e compromissos. Segurança e pontualidade.",
+    phone: "21 98010-5338",
+    image: carbonelliDriver,
+    highlights: ["Motorista Particular", "Viagens", "Pontualidade"],
+  },
+  {
+    id: "pablo-estetica",
+    name: "Pablo Escobar - Estética Automotiva",
+    category: "Serviços",
+    description: "Estética automotiva profissional. Deixe seu veículo impecável!",
+    phone: "21 98618-8935",
+    address: "Rua F 538, Nova Campinas",
+    image: pabloEstetica,
+    highlights: ["Estética Automotiva", "Lavagem", "Polimento"],
   },
 ];
