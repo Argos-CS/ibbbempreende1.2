@@ -17,6 +17,13 @@ import draGabrielli from "@/assets/businesses/dra-gabrielli.jpeg";
 import greyHouse from "@/assets/businesses/grey-house.jpeg";
 import carbonelliDriver from "@/assets/businesses/carbonelli-driver.jpeg";
 import pabloEstetica from "@/assets/businesses/pablo-estetica.jpeg";
+import novoEmpreendimento1 from "@/assets/businesses/pendentes/WhatsApp Image 2025-12-29 at 18.00.18.jpeg";
+import novoEmpreendimento2 from "@/assets/businesses/pendentes/WhatsApp Image 2025-12-29 at 18.00.19 (1).jpeg";
+import novoEmpreendimento3 from "@/assets/businesses/pendentes/WhatsApp Image 2025-12-29 at 18.00.19 (2).jpeg";
+import novoEmpreendimento4 from "@/assets/businesses/pendentes/WhatsApp Image 2025-12-29 at 18.00.19 (3).jpeg";
+import novoEmpreendimento5 from "@/assets/businesses/pendentes/WhatsApp Image 2025-12-29 at 18.00.19.jpeg";
+import novoEmpreendimento6 from "@/assets/businesses/pendentes/WhatsApp Image 2025-12-29 at 19.20.26.jpeg";
+import novoEmpreendimento7 from "@/assets/businesses/pendentes/WhatsApp Image 2026-01-11 at 16.12.59.jpeg";
 
 export type Category = 
   | "Todos"
@@ -238,5 +245,75 @@ export const businesses: Business[] = [
     address: "Rua F 538, Nova Campinas",
     image: pabloEstetica,
     highlights: ["Estética Automotiva", "Lavagem", "Polimento"],
+  },
+  {
+    id: "novo-empreendimento-1",
+    name: "Novo Empreendimento 1",
+    category: "Serviços",
+    description: "Descrição do novo empreendimento 1. Oferecemos serviços de alta qualidade para atender às suas necessidades.",
+    phone: "21 99999-9991",
+    instagram: "@novoempreendimento1",
+    image: novoEmpreendimento1,
+    highlights: ["Serviço 1", "Serviço 2", "Serviço 3"],
+  },
+  {
+    id: "novo-empreendimento-2",
+    name: "Novo Empreendimento 2",
+    category: "Confeitaria",
+    description: "Descrição do novo empreendimento 2. Doces e bolos para todas as ocasiões.",
+    phone: "21 99999-9992",
+    instagram: "@novoempreendimento2",
+    image: novoEmpreendimento2,
+    highlights: ["Bolos", "Doces", "Salgados"],
+  },
+  {
+    id: "novo-empreendimento-3",
+    name: "Novo Empreendimento 3",
+    category: "Serviços",
+    description: "Descrição do novo empreendimento 3. Soluções inovadoras para o seu dia a dia.",
+    phone: "21 99999-9993",
+    instagram: "@novoempreendimento3",
+    image: novoEmpreendimento3,
+    highlights: ["Inovação", "Qualidade", "Confiança"],
+  },
+  {
+    id: "novo-empreendimento-4",
+    name: "Novo Empreendimento 4",
+    category: "Beleza",
+    description: "Descrição do novo empreendimento 4. Cuidando da sua beleza e bem-estar.",
+    phone: "21 99999-9994",
+    instagram: "@novoempreendimento4",
+    image: novoEmpreendimento4,
+    highlights: ["Cabelo", "Maquiagem", "Estética"],
+  },
+  {
+    id: "novo-empreendimento-5",
+    name: "Novo Empreendimento 5",
+    category: "Marmitas",
+    description: "Descrição do novo empreendimento 5. Comida caseira com sabor de verdade.",
+    phone: "21 99999-9995",
+    instagram: "@novoempreendimento5",
+    image: novoEmpreendimento5,
+    highlights: ["Comida Caseira", "Delivery", "Variedade"],
+  },
+  {
+    id: "novo-empreendimento-6",
+    name: "Novo Empreendimento 6",
+    category: "Festas",
+    description: "Descrição do novo empreendimento 6. Tudo para a sua festa ser inesquecível.",
+    phone: "21 99999-9996",
+    instagram: "@novoempreendimento6",
+    image: novoEmpreendimento6,
+    highlights: ["Decoração", "Buffet", "Animação"],
+  },
+  {
+    id: "novo-empreendimento-7",
+    name: "Novo Empreendimento 7",
+    category: "Educação",
+    description: "Descrição do novo empreendimento 7. Aulas e cursos para o seu desenvolvimento.",
+    phone: "21 99999-9997",
+    instagram: "@novoempreendimento7",
+    image: novoEmpreendimento7,
+    highlights: ["Aulas Particulares", "Cursos Online", "Reforço Escolar"],
   },
 ];
