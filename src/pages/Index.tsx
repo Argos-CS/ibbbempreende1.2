@@ -3,26 +3,30 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { BusinessCard } from "@/components/BusinessCard";
 import { BusinessModal } from "@/components/BusinessModal";
+import { CategoryFilter } from "@/components/CategoryFilter";
 import { businesses, categories, Category, Business } from "@/data/businesses";
 import { Search } from "lucide-react";
 
 const Index = () => {
   const [searchQuery, setSearchQuery] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState<Category>("Todos");
   const [selectedBusiness, setSelectedBusiness] = useState<Business | null>(null);
 
-  // Filter businesses by search query
+  // Filter businesses by search query and category
   const filteredBusinesses = useMemo(() => {
-    if (!searchQuery) return businesses;
     return businesses.filter((business) => {
-      const matchesSearch =
+      const matchesSearch = !searchQuery || 
         business.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
         business.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
         business.highlights.some((h) =>
           h.toLowerCase().includes(searchQuery.toLowerCase())
         );
-      return matchesSearch;
+      
+      const matchesCategory = selectedCategory === "Todos" || business.category === selectedCategory;
+      
+      return matchesSearch && matchesCategory;
     });
-  }, [searchQuery]);
+  }, [searchQuery, selectedCategory]);
 
   // Group businesses by category
   const businessesByCategory = useMemo(() => {
@@ -46,7 +50,7 @@ const Index = () => {
 
       <main className="container py-12 md:py-16">
         {/* Search Section */}
-        <section className="mb-16">
+        <section className="mb-8">
           <div className="max-w-xl mx-auto">
             <div className="relative">
               <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
@@ -59,6 +63,14 @@ const Index = () => {
               />
             </div>
           </div>
+        </section>
+
+        {/* Category Filter */}
+        <section className="mb-12">
+          <CategoryFilter
+            selected={selectedCategory}
+            onSelect={setSelectedCategory}
+          />
         </section>
 
         {/* Category Sections */}
@@ -94,7 +106,7 @@ const Index = () => {
               Nenhum empreendedor encontrado
             </p>
             <p className="text-muted-foreground">
-              Tente ajustar a busca
+              Tente ajustar a busca ou filtro
             </p>
           </div>
         )}
