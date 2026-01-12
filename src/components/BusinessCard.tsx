@@ -1,4 +1,4 @@
-import { Phone, Instagram, MapPin } from "lucide-react";
+import { Phone, Instagram } from "lucide-react";
 import { Business } from "@/data/businesses";
 import { cn } from "@/lib/utils";
 
@@ -23,24 +23,19 @@ export function BusinessCard({ business, onClick, index }: BusinessCardProps) {
       )}
       style={{ animationDelay: `${index * 100}ms`, animationFillMode: "both" }}
     >
-      {/* Image Container */}
-      <div className="relative h-56 overflow-hidden">
+      {/* Image Container - Aspect ratio preservado */}
+      <div className="relative w-full aspect-[4/3] overflow-hidden bg-secondary">
         <img
           src={business.image}
           alt={business.name}
-          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+          className="w-full h-full object-contain bg-secondary transition-transform duration-700 group-hover:scale-105"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent" />
         
-        {/* Category Badge */}
-        <div className="absolute top-4 left-4">
-          <span className="px-3 py-1 text-xs font-medium bg-primary/90 text-primary-foreground rounded-full">
-            {business.category}
-          </span>
-        </div>
+        {/* Subtle gradient overlay only at bottom */}
+        <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-card/80 to-transparent" />
 
         {/* Hover Overlay */}
-        <div className="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+        <div className="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
       </div>
 
       {/* Content */}
